@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="TASK8.CSS" rel="stylesheet">
+        <title>LAB 6 TASK 8</title>
+    </head>
+    <body>
+        <main>
+            <section>
+                <div class="main">
+                    <div class="child">
+                        <div class="children">
+                            <h1 class="heading">
+                                Registration form using Bootstrap and validate it using Javascript
+                            </h1>
+                        </div>
+                        <h1>REGISTRATION FORM</h1>
+    
+        <form method="post" name="reg_form" onsubmit="validateform()">
+            <div style="margin: 50px;">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" class="form-control " name="fullname" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" class="form-control" name="email" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone(enter only 10 digit numbers)</label>
+                <input type="number" class="form-control"   name="ph" placeholder="Phone Number">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" class="form-control" name="pwd" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="Confirmpwd">Confirm Password</label>
+                <input type="password" class="form-control" name="Confirmpwd" placeholder=" Confirm Password">
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-2" name="submit" value="Register">Register</button>
+              </div>
+            </div>
+          </form>
+       </div>                       
+    </div>
+    </section>
+        </main>
+        <script>
+            function validateform(){  
+              var fullname=document.reg_form.fullname.value;  
+              var email=document.reg_form.email.value;  
+              var ph=document.reg_form.ph.value;
+              var pwd=document.reg_form.pwd.value;
+              var Confirmpwd=document.reg_form.Confirmpwd.value;
+                
+              if (fullname==""){  
+                alert("Enter full name.");  
+                 return false;  
+              }
+              else if (email==null || email==""){  
+                alert("Enter your email address.");  
+                return false;  
+              }
+                    else if(ph.length>10){
+            alert("phone number should not be greater than 10")
+            }
+    
+              else if(pwd==null || pwd==""){  
+                alert("Enter your password");  
+                return false;  
+                }  
+                {if(pwd==Confirmpwd){
+                return true;
+            }else{alert("password must be same!");return false;}}
+    
+              }  
+        </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 6 task 2</title>
+    <link href="TASK2.CSS" rel="stylesheet">
+</head>
+<body>
+    <body>
+        <main>
+            <section>
+                <div class="main">
+                    <div class="child">
+                        <div class="children">
+                            <h1 class="heading">
+                                Two Number In Array Get The Added Array
+                            </h1>
+                        </div>
+                        <div class="children">
+                            <label for="" class="same"><b>FIRST NUMBER</b></label>
+                            <input type="number" id="input" class="same" placeholder="Enter First  Number">
+                            <label for="" class="same"><b>SECOND NUMBER</b></label>
+                            <input type="number" id="input2" class="same" placeholder="Enter Second Number">
+                            <input type="button" id="btn" class="same" value="Add" onclick=" addedarray()">
+                           <textarea name="text" id="input3" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>                                     
+                </div>
+            </section>
+        </main>
+        <script>
+            var num1=document.getElementById('input');
+            var num2=document.getElementById('input2');
+            var result=document.getElementById('input3');
+            function addedarray(){
+            const numbers = [0,1,2,3,4,5]; 
+            result.value=" ";
+            if(num1.value.length>0 && num2.value.length>0)
+            {
+                const sum = parseInt (num1.value) + parseInt ( num2.value) ;    
+                for (var i= 0; i < numbers.length; i++) {
+    
+                    if (numbers[i]===sum) {
+                        result.value="The sum of user input matche the target:"+numbers[i];
+                    break;
+                    }
+                    else{
+                        result.value="The sum user input doesnot match any target in array"
+                    }
+                    }
+            } 
+            num1.value=" ";
+            num2.value=" ";
+                    }
+        </script>
+</body>
+</html>

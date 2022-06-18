@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 6 task 4</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="main">
+                <div class="child">
+                    <div class="children">
+                        <h1 class="heading">
+                            "BROWSER CASES"
+                        </h1>
+                    </div>
+                    <div class="children">
+                        <label for="" class="same"><b>SELECT YOUR OPTIONS</b></label>
+                        <ol>
+                            <li>CHROME</li>
+                            <li>MOZILLA FIRFOX</li>
+                            <li>OPERA</li>
+                            <li>EDGE</li>
+                        </ol>
+                        <input type="number" id="input" class="same" placeholder="Enter Number">
+                        <input type="button" id="btn" class="same" value="Enter" onclick="cases()">
+                    </div>
+                </div>                       
+            </div>
+        </section>
+    </main>
+    <script>
+        var check=document.getElementById('input');
+        function cases()
+        {
+            if(check.value.length>0)
+            {
+                switch (check.value) {
+                    case "1":
+                     alert("I am Using CHROME")
+                      break;
+                    case "2":
+                        alert("I am Using MOZILLA FIREFOX")
+                      break;
+                    case "3":
+                        alert("I am Using OPERA")
+                      break;
+                    case "4":
+                        alert("I am Using EDGE")
+                      break;
+                    default:
+                    alert("Enter Value Between 1 to 4")
+                    break;
+                  }
+                check.value='';
+            }   
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 6 TASK 6</title>
+    <link href="TASK6.CSS" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="main">
+                <div class="child">
+                    <div class="children">
+                        <h1 class="heading">
+                            "INFORMATON FOR YOUR FAVORITE RECIPE"
+                        </h1>
+                    </div>
+                    <div class="children">            
+                        <input type="button" id="btn" class="same" value="Check" onclick="check()">
+                        <textarea name="text" id="input" class="same" id="" cols="30" rows="5" readonly>                
+                        </textarea>
+                    </div>
+                </div>                       
+            </div>
+        </section>
+    </main>
+    <script>
+        var txtarea=document.getElementById('input');
+        var recipe = {
+            title: "CHAI :) (TEA)",
+            servings : 5,
+            ingredients:["WATER","TEA","ELACHI","Milk","SUGAR"],
+            details : function() {
+               
+                console.log("Title: "+this.title)
+            console.log("Serve: "+this.servings)
+            console.log("Ingredients: "+this.ingredients)
+                return "Title: "+this.title + "\nServings:" + this.servings+"\nIngredients: "+this.ingredients;
+            }
+         };
+        function check(){
+                txtarea.value=recipe.details();
+        }
+    </script>
+</body>
+</html>
